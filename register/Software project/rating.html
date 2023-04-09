@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ratings and Reviews</title>
+    <style>
+      /* CSS styling for the ratings and review system */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+        margin-top: 50px;
+      }
+      .rating {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        margin-top: 50px;
+      }
+      .rating input {
+        display: none;
+      }
+      .rating label {
+        color: #ddd;
+        font-size: 3rem;
+        cursor: pointer;
+      }
+      .rating label:before {
+        content: '\2605';
+        margin-right: 5px;
+      }
+      .rating input:checked ~ label {
+        color: #f70;
+      }
+      .review {
+        display: block;
+        margin-top: 20px;
+        text-align: center;
+      }
+      .review label {
+        display: block;
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+        color: #333;
+        text-align: left;
+      }
+      .review textarea {
+        width: 100%;
+        height: 100px;
+        border: 1px solid #ddd;
+        padding: 5px;
+        font-size: 1.2rem;
+      }
+      .submit-button {
+        display: block;
+        margin-top: 20px;
+        background-color: #f70;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: all 0.2s ease-in-out;
+      }
+      .submit-button:hover {
+        background-color: #333;
+        color: #fff;
+        transform: scale(1.1);
+      }
+      /* Additional CSS for color */
+      h1 {
+        color: #f70;
+      }
+      .rating label:before {
+        color: #ddd;
+        transition: all 0.2s ease-in-out;
+      }
+      .rating input:checked ~ label:before {
+        color: #f70;
+      }
+      .review label {
+        color: #f70;
+      }
+      .review textarea:focus {
+        border-color: #f70;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ratings and Reviews</h1>
+    <div class="rating">
+      <input type="radio" name="rating" id="rating-5" value="5" />
+      <label for="rating-5"></label>
+      <input type="radio" name="rating" id="rating-4" value="4" />
+      <label for="rating-4"></label>
+      <input type="radio" name="rating" id="rating-3" value="3" />
+      <label for="rating-3"></label>
+      <input type="radio" name="rating" id="rating-2" value="2" />
+      <label for="rating-2"></label>
+      <input type="radio" name="rating" id="rating-1" value="1" />
+      <label for="rating-1"></label>
+    </div>
+    <div class="review">
+      <label for="review-text">Leave a Review:</label>
+      <textarea id="review-text"></textarea>
+      <button class="submit-button" type="submit">Submit Review</button>
+    </div>
+  </body>
+</html>
